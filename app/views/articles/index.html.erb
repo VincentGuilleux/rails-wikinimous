@@ -1,0 +1,14 @@
+<h4>Wikinimous</h4>
+
+<ul>
+  <% @articles.each do |article| %>
+  <li>
+    <%= link_to article.title, article %>
+    <%= article.content %>
+  </li>
+  <% end %>
+</ul>
+
+<div>
+  <%= link_to "Create", new_article_path, class: 'btn btn-primary' %>
+</div>
